@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Trivia Game</title>
+
+	<!-- Bootstrap File -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- JQuery -->
+  	<script src="https://code.jquery.com/jquery.js"></script>
+
+  	<script src="assets/javascript/app.js"></script>
+</head>
+
+<div class="pagecontainer">
+<body>
+	<div class="container">
+		<!-- Header -->
+		<div class="header jumbotron text-center">
+			<h1>Chicago Trivia!</h1>
+		<div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="timeremaining">
+				<p>Time Remaining: 00:00</p>
+				</div>
+
+				<div class="question1 hidden">
+				<h3>What was the largest dinosaur purchased by The Field Museum in 1997?</h3>
+
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio1" value="option1"> Tyrannosaurus-Rex
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio2" value="option2"> Allosaurus
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio3" value="option3"> Brontosaurus
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio3" value="option4"> Brachisaurus
+					</label>
+				</div>
+
+				<div class="question2 hidden">
+				<h3>What is the sculpture called located in Millennium Park?</h3>
+					
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio1" value="option1"> The Bean
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio2" value="option2"> Cloud Gate
+					</label>
+				</div>
+
+				<div class="question3 hidden">
+				<h3>Where does the Willis Tower rank amongst the tallest buildings in the world?</h3>
+		
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio1" value="option1"> 16th
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio2" value="option2"> 23rd
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio3" value="option3"> 4th
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio3" value="option4"> 12th
+					</label>
+				</div>
+
+				<div class="question4 hidden">
+				<h3>What food is Chicago NOT known for?</h3>
+		
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio1" value="option1"> Deep Dish Pizza
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio2" value="option2"> Hot Dogs
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio3" value="option3"> Twinkies
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio3" value="option4"> Pretzels
+					</label>
+				</div>
+
+				<div class="question5 hidden">
+				<h3>How many millions of people visit Chicago annually?</h3>
+		
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio1" value="option1"> 13
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio2" value="option2"> 52
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio3" value="option3"> 27
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio3" value="option4"> 60
+					</label>
+				</div>
+
+				<div class="question6 hidden">
+				<h3>What is the iconic structure at Navy Pier?</h3>
+		
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio1" value="option1"> The Pier
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio2" value="option2"> The Crystal Gardens
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio3" value="option3"> The Ferris Wheel
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="options" id="inlineRadio3" value="option4"> The Spirit of Chicago
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<button type="submit" class="btn btn-default" id="submitStrt">Start!</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<button type="submit" class="btn btn-default hidden" id="submitStop">Submit</button>
+				</div>
+			</div>
+			
+			<div class="scorecontainer hidden">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Final Results:</h2>
+					</div>
+					<div class="col-md-12">
+						<div>Correct Answers: <span class="correctQuestions"></span></div>
+						<div>Incorrect Answers: <span class="incorrectQuestions"></span></div>
+						<div>Unanswered: <span class="UnansweredQuestions"></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</div>
+</html>
